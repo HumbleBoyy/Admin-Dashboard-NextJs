@@ -15,6 +15,9 @@ import {
     Settings,
     Smile,
     User,
+    LayoutDashboard,
+    Newspaper,
+    Folders,
   } from "lucide-react"
 const CustomSideBar = () => {
   return (
