@@ -1,6 +1,6 @@
-import { Post } from '@/types/posts';
+import { PostType } from '@/types/PostsType';
 
-const posts: Post[] = [
+const posts: PostType[] = [
   {
     id: '1',
     title: 'The Rise of Artificial Intelligence',
