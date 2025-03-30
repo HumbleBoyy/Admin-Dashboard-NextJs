@@ -24,7 +24,7 @@ const Header = () => {
        </div>
        <div className='flex items-center'>
        <DropdownMenu>
-       <DropdownMenuTrigger>
+       <DropdownMenuTrigger className='focus:outline-none'>
           <Avatar>
             <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
             <AvatarFallback>CN</AvatarFallback>
@@ -34,9 +34,9 @@ const Header = () => {
           <DropdownMenuLabel>My Account</DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuItem>Profile</DropdownMenuItem>
-          <DropdownMenuItem>Billing</DropdownMenuItem>
-          <DropdownMenuItem>Team</DropdownMenuItem>
-          <DropdownMenuItem>Subscription</DropdownMenuItem>
+          <DropdownMenuItem>
+             <Link href={"/auth"}>Log out</Link>
+          </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
        </div>
