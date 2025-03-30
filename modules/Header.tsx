@@ -7,7 +7,7 @@ const Header = () => {
     <div className='flex justify-between items-center bg-primary py-2 px-5 dark:bg-slate-800'>
        <div className='flex items-center gap-[5px]'>
            <Image className='w-[50px] h-[50px]' src={MainLogo} alt='Dashboard' width={50} height={50} priority/>
-           <Link href={"/"}><h1 className='font-bold text-white text-[30px]'>Dashboard</h1></Link>
+           <Link href={"/"} className='font-bold text-white text-[30px]'>Dashboard</Link>
        </div>
        <div>
          Dark Mode
