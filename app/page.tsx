@@ -2,7 +2,9 @@ import React from 'react'
 
 const MainPage = () => {
   return (
-    <div>Hello</div>
+    <div className='text-red-600'>
+      Main Page
+    </div>
   )
 }
 
