@@ -9,16 +9,14 @@ import {
     CommandShortcut,
   } from "@/components/ui/command"
   import {
-    Calculator,
-    Calendar,
     CreditCard,
     Settings,
-    Smile,
     User,
     LayoutDashboard,
     Newspaper,
     Folders,
   } from "lucide-react"
+import Link from "next/link"
 const CustomSideBar = () => {
   return (
     <Command className="rounded-none border shadow-md md:min-w-full bg-secondary">
@@ -27,16 +25,16 @@ const CustomSideBar = () => {
         <CommandEmpty>No results found.</CommandEmpty>
         <CommandGroup heading="Suggestions">
           <CommandItem>
-            <Calendar />
-            <span>Calendar</span>
+            <LayoutDashboard className="h-4 w-4"/>
+            <Link href={"/"}>Dashboard</Link>
           </CommandItem>
           <CommandItem>
-            <Smile />
-            <span>Search Emoji</span>
+            <Newspaper className="h-4 w-4"/>
+            <Link href={"/posts"}>Posts</Link>
           </CommandItem>
-          <CommandItem disabled>
-            <Calculator />
-            <span>Calculator</span>
+          <CommandItem>
+            <Folders className="h-4 w-4"/>
+            <Link href={"#"}>Categories</Link>
           </CommandItem>
         </CommandGroup>
         <CommandSeparator />
