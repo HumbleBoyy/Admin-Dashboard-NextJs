@@ -1,6 +1,7 @@
-import { AnalyticsItem } from '@/types/analytics';
+import { AnalyticsType } from "@/types/AnalyticsType";
 
-const data: AnalyticsItem[] = [
+
+const data: AnalyticsType[] = [
   {
     name: 'Jan',
     uv: 4000,
