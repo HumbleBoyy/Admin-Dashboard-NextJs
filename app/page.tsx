@@ -3,7 +3,7 @@
 const MainPage = () => {
   return (
     <>
-    
+       helo
     </>
   )
 }

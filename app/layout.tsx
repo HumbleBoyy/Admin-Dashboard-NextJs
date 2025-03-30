@@ -1,6 +1,6 @@
 import Header from "@/modules/Header";
 import "./globals.css";
-import { Sidebar } from "lucide-react";
+import CustomSideBar from "@/modules/CustomSideBar";
 
 
 
@@ -17,7 +17,7 @@ export default function RootLayout({
         <Header/>
         <div className="flex">
           <div className="hidden md:block h-[100vh]">
-            <Sidebar/>
+            <CustomSideBar/>
           </div>
           <div className="w-full p-5 md:max-w-[1140px]">
             {children}
