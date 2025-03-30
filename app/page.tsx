@@ -1,9 +1,10 @@
+import DashBoardCard from "@/components/dashboard/DashBoardCard"
 
 
 const MainPage = () => {
   return (
     <>
-       helo
+       <DashBoardCard/>
     </>
   )
 }
