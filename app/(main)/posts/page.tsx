@@ -1,9 +1,14 @@
+import BackButton from '@/components/backbutton/BackButton'
 import PostsTable from '@/components/posts/PostsTable'
 import React from 'react'
 
 const PostPage = () => {
   return (
-    <PostsTable title='Posts'/>
+    <>
+      <BackButton text='Go Back'/>
+      <PostsTable title='Posts'/>
+    </>
+    
   )
 }
 
