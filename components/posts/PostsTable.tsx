@@ -19,8 +19,10 @@ import Link from "next/link"
 
 const PostsTable = ({limit, title}: PostsTableType) => {
     // Sort posts in descendant order based on date
-    const sortPost:PostType[] = [...posts].sort((a,b)=> new Date(b.date).getTime() - new Date(a.date).getTime())
+    const sortedPostToTime:PostType[] = [...posts].sort((a,b)=> new Date(b.date).getTime() - new Date(a.date).getTime())
 
+    // Filter posts to limit
+    const filteredPostToLimit = limit ? sortedPostToTime.slice(0, limit) : sortedPostToTime;
   return (
     <div className="flex flex-col gap-3">
         <h2 className="text-[20px] font-bold text-slate-500">{title}</h2>
@@ -35,7 +37,7 @@ const PostsTable = ({limit, title}: PostsTableType) => {
             </TableRow>
         </TableHeader>
         <TableBody>
-            {sortPost.map((item:PostType)=>(
+            {filteredPostToLimit.map((item:PostType)=>(
                 <TableRow key={item.id}>
                 <TableCell>{item.title}</TableCell>
                 <TableCell className="hidden md:table-cell">{item.author}</TableCell>
