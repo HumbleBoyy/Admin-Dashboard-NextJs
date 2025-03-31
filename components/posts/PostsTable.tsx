@@ -7,6 +7,8 @@ import {
     TableHeader,
     TableRow,
   } from "@/components/ui/table"
+import posts from "@/data/posts"
+import { PostType } from "@/types/PostType"
 
   interface PostsTableType {
     limit?:number
@@ -21,17 +23,15 @@ const PostsTable = ({limit, title}: PostsTableType) => {
             <TableRow>
                 <TableHead className="w-[100px]">Title</TableHead>
                 <TableHead className="hidden md:table-cell">Author</TableHead>
-                <TableHead>Method</TableHead>
                 <TableHead className="text-right hidden md:table-cell">Date</TableHead>
             </TableRow>
         </TableHeader>
         <TableBody>
-            <TableRow>
+            {posts.map((item:PostType)=>(
+                <TableRow>
                 <TableCell className="font-medium">INV001</TableCell>
-                <TableCell>Paid</TableCell>
-                <TableCell>Credit Card</TableCell>
-                <TableCell className="text-right">$250.00</TableCell>
             </TableRow>
+            ))}
         </TableBody>
 </Table>
   )
