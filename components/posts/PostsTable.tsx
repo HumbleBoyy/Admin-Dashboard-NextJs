@@ -21,15 +21,19 @@ const PostsTable = ({limit, title}: PostsTableType) => {
         <TableCaption>A list of recent posts.</TableCaption>
         <TableHeader>
             <TableRow>
-                <TableHead className="w-[100px]">Title</TableHead>
+                <TableHead>Title</TableHead>
                 <TableHead className="hidden md:table-cell">Author</TableHead>
-                <TableHead className="text-right hidden md:table-cell">Date</TableHead>
+                <TableHead className="hidden md:table-cell text-right">Date</TableHead>
+                <TableHead className="hidden md:table-cell text-right">More</TableHead>
             </TableRow>
         </TableHeader>
         <TableBody>
             {posts.map((item:PostType)=>(
-                <TableRow>
-                <TableCell className="font-medium">INV001</TableCell>
+                <TableRow key={item.id}>
+                <TableCell>{item.title}</TableCell>
+                <TableCell className="hidden md:table-cell">{item.author}</TableCell>
+                <TableCell className="hidden md:table-cell text-right">{item.date}</TableCell>
+                <TableCell className="hidden md:table-cell text-right">{item.date}</TableCell>
             </TableRow>
             ))}
         </TableBody>
