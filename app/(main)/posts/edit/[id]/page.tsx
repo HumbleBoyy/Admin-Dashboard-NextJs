@@ -64,7 +64,6 @@ const SinglePage = ({params}:PostEditPageType) => {
           control={form.control}
           name="title"
           render={({ field }) => (
-          <>
               <FormItem>
               <FormLabel className='uppercase text-xs font-bold text-zinc-500 dark:text-white'>Title</FormLabel>
               <FormControl>
@@ -72,14 +71,19 @@ const SinglePage = ({params}:PostEditPageType) => {
               </FormControl>
               <FormMessage />
             </FormItem>
-               <FormItem>
-               <FormLabel className='uppercase text-xs font-bold text-zinc-500 dark:text-white'>Post Body</FormLabel>
-               <FormControl>
-                 <Textarea className='bg-slate-200 border-0 focus-visible:ring-0 dark:bg-slate-500 focus-visible:ring-offset-0 text-black dark:text-white' placeholder="Title" {...field} />
-               </FormControl>
-               <FormMessage />
-             </FormItem>
-          </>
+          )}
+        />
+          <FormField
+           control={form.control}
+           name="body"
+           render={({ field }) => (
+            <FormItem>
+              <FormLabel className='uppercase text-xs font-bold text-zinc-500 dark:text-white'>Post Body</FormLabel>
+              <FormControl>
+                <Textarea className='bg-slate-200 border-0 focus-visible:ring-0 dark:bg-slate-500 focus-visible:ring-offset-0 text-black dark:text-white resize-none h-[150px]' placeholder="Post Body" {...field} />
+              </FormControl>
+              <FormMessage />
+          </FormItem>
           )}
         />
         <Button type="submit">Submit</Button>
