@@ -19,7 +19,9 @@ import Link from "next/link"
 
 const PostsTable = ({limit, title}: PostsTableType) => {
   return (
-    <Table>
+    <div className="flex flex-col gap-3">
+        <h2>{title}</h2>
+        <Table>
         <TableCaption>A list of recent posts.</TableCaption>
         <TableHeader>
             <TableRow>
@@ -39,7 +41,8 @@ const PostsTable = ({limit, title}: PostsTableType) => {
             </TableRow>
             ))}
         </TableBody>
-</Table>
+    </Table>
+    </div>
   )
 }
 
