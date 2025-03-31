@@ -66,7 +66,7 @@ const SinglePage = ({params}:PostEditPageType) => {
             <FormItem>
               <FormLabel className='uppercase text-xs font-bold text-zinc-500 dark:text-secondary'>Title</FormLabel>
               <FormControl>
-                <Input placeholder="Title" {...field} />
+                <Input className='bg-slate-200 border-0 focus-visible:ring-0 focus-visible:ring-offset-0 text-black' placeholder="Title" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
