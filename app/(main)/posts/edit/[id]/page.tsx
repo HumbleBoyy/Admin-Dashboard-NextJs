@@ -73,7 +73,7 @@ const SinglePage = ({params}:PostEditPageType) => {
             </FormItem>
           )}
         />
-          <FormField
+        <FormField
            control={form.control}
            name="body"
            render={({ field }) => (
@@ -86,7 +86,33 @@ const SinglePage = ({params}:PostEditPageType) => {
           </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+         <FormField
+           control={form.control}
+           name="author"
+           render={({ field }) => (
+            <FormItem>
+              <FormLabel className='uppercase text-xs font-bold text-zinc-500 dark:text-white'>Author</FormLabel>
+              <FormControl>
+                <Input className='bg-slate-200 border-0 focus-visible:ring-0 dark:bg-slate-500 focus-visible:ring-offset-0 text-black dark:text-white resize-none' placeholder="Author" {...field} />
+              </FormControl>
+              <FormMessage />
+          </FormItem>
+          )}
+        />
+          <FormField
+           control={form.control}
+           name="date"
+           render={({ field }) => (
+            <FormItem>
+              <FormLabel className='uppercase text-xs font-bold text-zinc-500 dark:text-white'>Date</FormLabel>
+              <FormControl>
+                <Input className='bg-slate-200 border-0 focus-visible:ring-0 dark:bg-slate-500 focus-visible:ring-offset-0 text-black dark:text-white resize-none' placeholder="Date" {...field} />
+              </FormControl>
+              <FormMessage />
+          </FormItem>
+          )}
+        />
+        <Button type="submit" className='w-full dark:bg-slate-800 dark:text-white cursor-pointer'>Update post</Button>
       </form>
     </Form>
     </>
