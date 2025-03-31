@@ -15,6 +15,7 @@ import { Input } from "@/components/ui/input"
 import { Button } from '@/components/ui/button'
 import posts from '@/data/posts'
 import { PostType } from '@/types/PostType'
+import { Textarea } from '@/components/ui/textarea'
 
 const formSchema = z.object({
   title: z.string().min(2, {
@@ -63,13 +64,22 @@ const SinglePage = ({params}:PostEditPageType) => {
           control={form.control}
           name="title"
           render={({ field }) => (
-            <FormItem>
-              <FormLabel className='uppercase text-xs font-bold text-zinc-500 dark:text-secondary'>Title</FormLabel>
+          <>
+              <FormItem>
+              <FormLabel className='uppercase text-xs font-bold text-zinc-500 dark:text-white'>Title</FormLabel>
               <FormControl>
-                <Input className='bg-slate-200 border-0 focus-visible:ring-0 focus-visible:ring-offset-0 text-black' placeholder="Title" {...field} />
+                <Input className='bg-slate-200 border-0 focus-visible:ring-0 dark:bg-slate-500 focus-visible:ring-offset-0 text-black dark:text-white' placeholder="Title" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
+               <FormItem>
+               <FormLabel className='uppercase text-xs font-bold text-zinc-500 dark:text-white'>Post Body</FormLabel>
+               <FormControl>
+                 <Textarea className='bg-slate-200 border-0 focus-visible:ring-0 dark:bg-slate-500 focus-visible:ring-offset-0 text-black dark:text-white' placeholder="Title" {...field} />
+               </FormControl>
+               <FormMessage />
+             </FormItem>
+          </>
           )}
         />
         <Button type="submit">Submit</Button>
