@@ -7,7 +7,7 @@ import { DashBoardCardType } from "@/types/DashboardCardType"
 
  const DashBoardCard:React.FC<DashBoardCardType> = ({icon, title, count}) => {
   return (
-    <Card className="w-[300px] bg-slate-100 dark:bg-slate-800 p-4 pb-0">
+    <Card className="w-full md:w-[300px] bg-slate-100 dark:bg-slate-800 p-4 pb-0">
       <CardContent>
         <h3 className="text-3xl text-center mb-4 font-bold text-slate-500 dark:text-slate-200">{title}</h3>
         <div className="flex gap-2 justify-center items-center">
