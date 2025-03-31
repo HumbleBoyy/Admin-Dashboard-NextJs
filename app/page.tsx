@@ -1,4 +1,5 @@
 import DashBoardCard from "@/components/dashboard/DashBoardCard"
+import PostsTable from "@/components/posts/PostsTable"
 import { Folder, MessageCircle, Newspaper, User } from "lucide-react"
 
 
@@ -11,6 +12,7 @@ const MainPage = () => {
          <DashBoardCard title="Users" icon={<User className="text-slate-500" size={72}/>} count={500}/>
          <DashBoardCard title="Comments" icon={<MessageCircle className="text-slate-500" size={72}/>} count={300}/>
        </div>
+       <PostsTable/>
     </>
   )
 }
