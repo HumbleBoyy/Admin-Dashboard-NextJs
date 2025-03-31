@@ -1,4 +1,5 @@
 import BackButton from '@/components/backbutton/BackButton'
+import PostPagenation from '@/components/posts/PostPagenation'
 import PostsTable from '@/components/posts/PostsTable'
 import React from 'react'
 
@@ -7,6 +8,7 @@ const PostPage = () => {
     <>
       <BackButton text='Go Back'/>
       <PostsTable title='Posts'/>
+      <PostPagenation/>
     </>
     
   )
