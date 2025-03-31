@@ -12,7 +12,7 @@ const MainPage = () => {
          <DashBoardCard title="Users" icon={<User className="text-slate-500" size={72}/>} count={500}/>
          <DashBoardCard title="Comments" icon={<MessageCircle className="text-slate-500" size={72}/>} count={300}/>
        </div>
-       <PostsTable title="Latest Posts"/>
+       <PostsTable title="Latest Posts" limit={6}/>
     </>
   )
 }

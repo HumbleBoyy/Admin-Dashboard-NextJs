@@ -30,7 +30,7 @@ const PostsTable = ({limit, title}: PostsTableType) => {
         <TableCaption>A list of recent posts.</TableCaption>
         <TableHeader>
             <TableRow>
-                <TableHead>Title</TableHead>
+                <TableHead>Post Title</TableHead>
                 <TableHead className="hidden md:table-cell">Author</TableHead>
                 <TableHead className="hidden md:table-cell text-right">Date</TableHead>
                 <TableHead className="text-center">More</TableHead>
