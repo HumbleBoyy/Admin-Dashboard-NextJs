@@ -19,7 +19,7 @@ export default function RootLayout({
           <div className="hidden md:block h-[100vh] w-[300px]">
             <CustomSideBar/>
           </div>
-          <div className="w-full p-5 md:max-w-[1140px]">
+          <div className="w-full p-5 md:max-w-[1140px] h-[100vh] overflow-y-scroll">
             {children}
           </div>
         </div>
