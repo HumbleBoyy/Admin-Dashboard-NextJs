@@ -1,8 +1,11 @@
+import BackButton from '@/components/backbutton/BackButton'
 import React from 'react'
 
 const SinglePage = () => {
   return (
-    <div>SinglePage</div>
+    <>
+      <BackButton text='Go Back'/>
+    </>
   )
 }
 
