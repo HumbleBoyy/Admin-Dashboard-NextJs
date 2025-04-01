@@ -16,16 +16,16 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { useTheme } from "next-themes"
+import { ThemeToggler } from "./ThemeToggler"
 const Header = () => {
-  const { setTheme } = useTheme()
   return (
     <div className='flex justify-between items-center bg-primary py-2 px-5 dark:bg-slate-800'>
        <div className='flex items-center gap-[5px]'>
            <Image className='w-[50px] h-[50px]' src={MainLogo} alt='Dashboard' width={50} height={50} priority/>
            <Link href={"/"} className='font-bold text-white text-[30px]'>Dashboard</Link>
        </div>
-       <div className='flex items-center'>
-
+       <div className='flex items-center gap-5'>
+      <ThemeToggler/>
       {/* User Account */}
        <DropdownMenu>
        <DropdownMenuTrigger className='focus:outline-none'>
