@@ -46,7 +46,7 @@ const data: AnalyticsType[] = [
   },
   {
     name: 'Aug',
-    uv: 400,
+    uv: 2500,
     pv: 2400,
     amt: 2400,
   },
