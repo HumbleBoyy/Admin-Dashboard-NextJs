@@ -46,9 +46,6 @@ import {
           <CardContent className="space-y-2">
             <Register/>
           </CardContent>
-          <CardFooter>
-            <Button>Register</Button>
-          </CardFooter>
         </Card>
       </TabsContent>
     </Tabs>
