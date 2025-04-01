@@ -15,13 +15,14 @@ export default function RootLayout({
       <title>Dashboard</title>
       <link rel="icon" href="./logo.png" />
       <body>
-        <Header/>
         <ThemeProvider
            attribute="class"
-           defaultTheme="system"
-           enableSystem
+           defaultTheme="light"
+           enableSystem={false}
+           storageKey="dashboard-theme"
            disableTransitionOnChange
         > 
+        <Header/>
         <div className="flex">
           <div className="hidden md:block h-[100vh] w-[300px]">
             <CustomSideBar/>
