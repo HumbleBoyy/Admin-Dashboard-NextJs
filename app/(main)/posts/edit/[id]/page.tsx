@@ -17,6 +17,7 @@ import posts from '@/data/posts'
 import { PostType } from '@/types/PostType'
 import { Textarea } from '@/components/ui/textarea'
 import { toast } from 'sonner'
+import { useRouter } from 'next/navigation'
 
 
 
@@ -41,6 +42,7 @@ interface PostEditPageType{
   }
 }
 const SinglePage = ({params}:PostEditPageType) => {
+  const router = useRouter()
   const post = posts.find((item:PostType)=> item.id === params.id)
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -55,6 +57,9 @@ const SinglePage = ({params}:PostEditPageType) => {
 
   function onSubmit(data: z.infer<typeof formSchema>) {
     toast.success("Post updated successfully")
+    setTimeout(()=> {
+       router.back()
+    },1500)
   }
   return (
     <>
