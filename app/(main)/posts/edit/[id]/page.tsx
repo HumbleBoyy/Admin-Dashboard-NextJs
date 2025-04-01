@@ -38,7 +38,7 @@ const formSchema = z.object({
 
 interface PostEditPageType{
   params:{
-    id:string
+    id:string | number
   }
 }
 const SinglePage = ({params}:PostEditPageType) => {
