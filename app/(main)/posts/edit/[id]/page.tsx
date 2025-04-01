@@ -37,7 +37,7 @@ const formSchema = z.object({
 })
 
 
-const SinglePage = (id:string) => {
+const SinglePage = (id:string | null) => {
   const router = useRouter()
   const post = posts.find((item:PostType)=> item.id === id)
 
