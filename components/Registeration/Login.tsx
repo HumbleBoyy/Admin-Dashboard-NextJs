@@ -32,7 +32,7 @@ const SignIn = () => {
   })
 
   function onSubmit(data: z.infer<typeof formSchema>) {
-        toast.success("Signed In Successfully")
+        toast.success(`Welcome ${data.username}`)
         setTimeout(()=> {
            router.push("/")
         },1500)

@@ -27,7 +27,6 @@ const formSchema = z.object({
 
 
 const Register = () => {
- const router = useRouter()
 
  const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -40,7 +39,7 @@ const Register = () => {
   })
 
   function onSubmit(data: z.infer<typeof formSchema>) {
-        toast.success("Registered  Successfully")
+        toast.success(`${data.username} Registered Successfully`)
         setTimeout(()=> {
           location.reload()
         },2000)
