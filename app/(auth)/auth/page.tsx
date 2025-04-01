@@ -1,5 +1,5 @@
+import SignIn from "@/components/Registeration/Login"
 import Register from "@/components/Registeration/Register"
-import SignIn from "@/components/Registeration/SignIn"
 import { Button } from "@/components/ui/button"
 import {
   Card,
@@ -33,9 +33,6 @@ import {
           <CardContent className="space-y-2">
             <SignIn/>
           </CardContent>
-          <CardFooter>
-            <Button>Sign In</Button>
-          </CardFooter>
         </Card>
       </TabsContent>
       <TabsContent value="register">

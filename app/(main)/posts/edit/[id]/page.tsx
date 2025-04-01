@@ -121,7 +121,7 @@ const SinglePage = ({params}:PostEditPageType) => {
         />
         <Button type="submit" className='w-full dark:bg-slate-800 dark:text-white cursor-pointer'>Update post</Button>
       </form>
-    </Form>
+      </Form>
     </>
   )
 }
