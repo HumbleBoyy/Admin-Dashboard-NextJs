@@ -36,14 +36,10 @@ const formSchema = z.object({
   }),
 })
 
-interface PostEditPageType{
-  params:{
-    id:string
-  }
-}
-const SinglePage = ({params}:PostEditPageType) => {
+
+const SinglePage = (id:string) => {
   const router = useRouter()
-  const post = posts.find((item:PostType)=> item.id === params.id)
+  const post = posts.find((item:PostType)=> item.id === id)
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
