@@ -17,7 +17,7 @@ import posts from '@/data/posts'
 import { PostType } from '@/types/PostType'
 import { Textarea } from '@/components/ui/textarea'
 import { toast } from 'sonner'
-import { useRouter } from 'next/navigation'
+import { useParams, useRouter } from 'next/navigation'
 
 
 
@@ -36,14 +36,10 @@ const formSchema = z.object({
   }),
 })
 
-interface PostEditPageType{
-  params:{
-    id:string
-  }
-}
-const SinglePage = ({params}:PostEditPageType) => {
+const SinglePage = () => {
+  const {id} = useParams()
   const router = useRouter()
-  const post = posts.find((item:PostType)=> item.id.toString()  === params.id)
+  const post = posts.find((item:PostType)=> item.id  === id)
   
 
 
@@ -62,9 +58,6 @@ const SinglePage = ({params}:PostEditPageType) => {
     setTimeout(()=> {
        router.back()
     },1500)
-  }
-  if (!params?.id) {
-    return <p>Loading...</p>
   }
   return (
     <>
