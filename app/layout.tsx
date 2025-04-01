@@ -1,7 +1,7 @@
 import Header from "@/modules/Header";
 import "./globals.css";
 import CustomSideBar from "@/modules/CustomSideBar";
-
+import { Toaster } from "sonner";
 
 
 export default function RootLayout({
@@ -21,6 +21,7 @@ export default function RootLayout({
           </div>
           <div className="w-full p-5 md:max-w-[1140px] h-[100vh] overflow-y-scroll">
             {children}
+            <Toaster position="top-right"/>
           </div>
         </div>
       </body>
