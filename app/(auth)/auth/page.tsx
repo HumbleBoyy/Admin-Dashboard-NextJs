@@ -19,52 +19,60 @@ import {
   return (
     <Tabs defaultValue="account" className="w-[400px]">
       <TabsList className="grid w-full grid-cols-2">
-        <TabsTrigger value="account">Account</TabsTrigger>
-        <TabsTrigger value="password">Password</TabsTrigger>
+        <TabsTrigger value="signin">Sign In</TabsTrigger>
+        <TabsTrigger value="register">Register</TabsTrigger>
       </TabsList>
-      <TabsContent value="account">
+      <TabsContent value="signin">
         <Card>
           <CardHeader>
-            <CardTitle>Account</CardTitle>
+            <CardTitle>Sign In</CardTitle>
             <CardDescription>
-              Make changes to your account here. Click save when you're done.
+              Sign In to your account
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-2">
             <div className="space-y-1">
-              <Label htmlFor="name">Name</Label>
-              <Input id="name" defaultValue="Pedro Duarte" />
+              <Label htmlFor="name">Username</Label>
+              <Input id="name" placeholder="Username" />
             </div>
             <div className="space-y-1">
-              <Label htmlFor="username">Username</Label>
-              <Input id="username" defaultValue="@peduarte" />
+              <Label htmlFor="password">Password</Label>
+              <Input id="password" placeholder="Password" type="password" />
             </div>
           </CardContent>
           <CardFooter>
-            <Button>Save changes</Button>
+            <Button>Sign In</Button>
           </CardFooter>
         </Card>
       </TabsContent>
-      <TabsContent value="password">
+      <TabsContent value="register">
         <Card>
           <CardHeader>
-            <CardTitle>Password</CardTitle>
+            <CardTitle>Register</CardTitle>
             <CardDescription>
-              Change your password here. After saving, you'll be logged out.
+               Create a new account or just sign in if you have already an account
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-2">
             <div className="space-y-1">
-              <Label htmlFor="current">Current password</Label>
-              <Input id="current" type="password" />
+              <Label htmlFor="Name">Name</Label>
+              <Input id="name" type="text" placeholder="Name"/>
             </div>
             <div className="space-y-1">
-              <Label htmlFor="new">New password</Label>
-              <Input id="new" type="password" />
+              <Label htmlFor="username">Username</Label>
+              <Input id="username" type="text" placeholder="Username" />
+            </div>
+            <div className="space-y-1">
+              <Label htmlFor="password">Password</Label>
+              <Input id="password" type="password" placeholder="Password"/>
+            </div>
+            <div className="space-y-1">
+              <Label htmlFor="confirmpassword">Confirm Password</Label>
+              <Input id="confirmpassword" type="password" placeholder="Confirm Password"/>
             </div>
           </CardContent>
           <CardFooter>
-            <Button>Save password</Button>
+            <Button>Register</Button>
           </CardFooter>
         </Card>
       </TabsContent>
