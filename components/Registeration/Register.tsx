@@ -42,8 +42,8 @@ const Register = () => {
   function onSubmit(data: z.infer<typeof formSchema>) {
         toast.success("Registered  Successfully")
         setTimeout(()=> {
-           router.push("/auth")
-        },1500)
+          location.reload()
+        },2000)
       }
    
   return (
