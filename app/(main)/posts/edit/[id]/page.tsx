@@ -56,7 +56,7 @@ const SinglePage = ({params}:PostEditPageType) => {
   })
 
   function onSubmit(data: z.infer<typeof formSchema>) {
-    toast.success("Post updated successfully")
+    toast.success(`Post By ${data.author} updated successfully`)
     setTimeout(()=> {
        router.back()
     },1500)
