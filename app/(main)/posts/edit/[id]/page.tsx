@@ -43,7 +43,7 @@ interface PostEditPageType{
 }
 const SinglePage = ({params}:PostEditPageType) => {
   const router = useRouter()
-  const post = posts.find((item:PostType)=> item.id.toString()  === params.id)
+  const post = posts.find((item:any)=> item.id.toString()  === params.id)
   
 
 
