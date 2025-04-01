@@ -1,5 +1,4 @@
 "use client"
-import { AnalyticsType } from '@/types/AnalyticsType';
 import { LineChart, XAxis, YAxis, CartesianGrid,ResponsiveContainer, Line } from 'recharts';
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card"
 import data from '@/data/analytics';

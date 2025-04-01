@@ -1,4 +1,4 @@
-import React from "react"
+
 
 export interface ButtonType {
     type:"button" | "reset" | "submit"
