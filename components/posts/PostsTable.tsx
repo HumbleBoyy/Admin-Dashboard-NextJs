@@ -9,7 +9,7 @@ import {
   } from "@/components/ui/table"
 import posts from "@/data/posts"
 import { PostType } from "@/types/PostType"
-import { Edit, Edit2Icon } from "lucide-react"
+import { Edit } from "lucide-react"
 import Link from "next/link"
 
   interface PostsTableType {
